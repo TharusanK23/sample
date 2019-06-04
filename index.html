@@ -24,7 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="index_data/style.css">
 <style type="text/css">#mc_embed_signup input.mce_inline_error { border-color:#6B0505; } #mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff; }</style><link id="link" rel="stylesheet" type="text/css" media="screen" href="index_data/style.css"><link rel="stylesheet" type="text/css" media="screen" href="index_data/style_switcher.css"><script type="text/javascript" src="index_data/722835766359957504.json"></script>
 	  <script src="//connect.soundcloud.com/sdk.js"></script>
-	  
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>	  
      <script src="script.js"></script>-->
 
 
@@ -270,104 +270,12 @@
 	<!-- END RS5.0 Core JS Files -->
 	<script type="text/javascript" src="index_data/custom_js.js"></script>
 
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+         <!-- Include all compiled plugins (below), or include individual files as needed -->
+         <script src = "js/bootstrap.min.js"></script>
 	
-	<script type="text/javascript">
-	jQuery(document).ready(function($) {
-    	"use strict";
-		// First Player
-    	var changeTrack = function changeTrack(event) {
-	        var current = myPlaylist.current,
-	        	playlist = myPlaylist.playlist;
-	        $.each(playlist, function (index, obj) {
-	            if (index == current) {
-	                $("#nowPlaying .artist-name").html(obj.artist);
-	                $("#nowPlaying .track-name").html(obj.title);
-	            }
-	        });
-	    };
 
-		var myPlaylist = new jPlayerPlaylist({
-			jPlayer: "#jquery_jplayer_1",
-			cssSelectorAncestor: "#jp_container_1",
-		}, [
-			{
-				artist: "Titan Slayer",
-				title:"Sisters of Furry",
-				mp3:"assets/mp3/Track-3.mp3",
-				poster: "assets/img/elements/poster-1.jpg",
-				free: true
-			},
-			{
-				artist: "Titan Slayer",
-				title:"Tempered Song",
-				mp3:"assets/mp3/Track-1.mp3",
-				poster: "assets/img/elements/poster-2.jpg"
-			},
-			{
-				artist: "Titan Slayer First",
-				title:"Cyber Sonnet",
-				mp3:"assets/mp3/Track-2.mp3",
-				poster: "assets/img/elements/poster-3.jpg"
-			},
-			{
-				artist: "Titan Slayer feat Rihanna",
-				title:"Free Song",
-				mp3:"assets/mp3/Track-4.mp3",
-				poster: "assets/img/elements/poster-4.jpg"
-			},
-			{
-				artist: "Titan Slayer",
-				title:"Cro Magnon Man",
-				mp3:"assets/mp3/Track-5.mp3",
-				poster: "assets/img/elements/poster-5.jpg"
-			},
-			{
-				artist: "Titan Slayer feat Adelle",
-				title:"Your Face",
-				mp3:"assets/mp3/Track-3.mp3",
-				poster: "assets/img/elements/poster-1.jpg"
-			},
-			{
-				artist: "Titan Slayer",
-				title:"Lentement",
-				mp3:"assets/mp3/Track-1.mp3",
-				poster: "assets/img/elements/poster-2.jpg"
-			},
-			{
-				artist: "Titan Slayer",
-				title:"Cro Magnon Man",
-				mp3:"assets/mp3/Track-2.mp3",
-				poster: "assets/img/elements/poster-3.jpg"
-			}
-		],{
-			playlistOptions: {
-			    enableRemoveControls: true
-			},
-			swfPath: "assets/jplayer/jplayer",
-			supplied: "oga, mp3",
-			wmode: "window",
-			useStateClassSkin: true,
-			autoBlur: false,
-			smoothPlayBar: false,
-			keyEnabled: true,
-			size: {
-                width: "120px",
-                height: "120px"
-            },
-            ready: changeTrack,
-            play: function(event) {
-            	changeTrack();
-            	var $mythis = $(this);
-            	$mythis.removeClass('spin-disk');
-		    	setTimeout( function() { $mythis.addClass('spin-disk'); }, 100);
-		    },
-		    pause: function(event) {
-		    	$(this).removeClass('spin-disk');
-		    }
-		});
-	});//end .ready
-	</script>
-
-
-</body></html>
+</body>
+</html>
